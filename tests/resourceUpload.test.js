@@ -18,9 +18,7 @@ describe("Upload refusé sans droit", () => {
       status: "active",
     });
 
-    if (!user) {
-      throw new Error("No active learner found in database");
-    }
+    
 
     token = jwt.sign(
       { sub: user._id.toString() },
